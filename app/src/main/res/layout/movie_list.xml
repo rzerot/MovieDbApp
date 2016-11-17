@@ -4,6 +4,8 @@
     android:layout_height="match_parent"
     android:orientation="horizontal"
     android:layout_weight="1"
+android:paddingBottom="5px"
+    android:paddingTop="5px"
     >
     <ImageView
         android:layout_width="match_parent"
