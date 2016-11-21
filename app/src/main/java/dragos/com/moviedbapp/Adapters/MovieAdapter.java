@@ -28,7 +28,7 @@ public class MovieAdapter extends BaseAdapter {
     Context context;
     ArrayList<Movie> movies;
     LayoutInflater inflater;
-    private static final String POSTER_LINK = "http://image.tmdb.org/t/p/w185_and_h278_bestv2";
+    public static final String POSTER_LINK = "http://image.tmdb.org/t/p/w185_and_h278_bestv2";
     public static final String MOVIEKEY ="332";
     public MovieAdapter(Context context, ArrayList<Movie> movies) {
         this.context = context;

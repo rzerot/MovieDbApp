@@ -21,8 +21,11 @@
         </activity>
         <activity
             android:name=".MoreInfoActivity"
+            android:screenOrientation="landscape">
             android:label="@string/title_activity_more_info"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".PosterActivity"></activity>
     </application>
 
 </manifest>
