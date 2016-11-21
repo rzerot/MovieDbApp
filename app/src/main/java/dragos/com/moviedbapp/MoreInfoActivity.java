@@ -67,8 +67,9 @@ public class MoreInfoActivity extends FragmentActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MoreInfoActivity.this, PosterActivity.class);
-                intent.putExtra(POSTER_KEY, movie.getId());
+                intent.putExtra(POSTER_KEY, movie);
                 startActivity(intent);
+
             }
         });
 

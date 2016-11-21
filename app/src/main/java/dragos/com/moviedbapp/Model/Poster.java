@@ -1,10 +1,13 @@
 package dragos.com.moviedbapp.Model;
 
+import com.google.gson.annotations.SerializedName;
+
 /**
  * Created by L on 11/21/2016.
  */
 
 public class Poster {
+    @SerializedName("file_path")
     private String poster_path;
 
     public String getPoster_path() {

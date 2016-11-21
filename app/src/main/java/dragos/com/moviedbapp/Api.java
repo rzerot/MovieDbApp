@@ -1,9 +1,12 @@
 package dragos.com.moviedbapp;
 
+import java.security.Key;
+
 import dragos.com.moviedbapp.Model.Credit;
 import dragos.com.moviedbapp.Model.CreditResponse;
 import dragos.com.moviedbapp.Model.MovieResponse;
 import dragos.com.moviedbapp.Model.PosterResponse;
+import dragos.com.moviedbapp.Model.VideoResponse;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
@@ -26,11 +29,8 @@ public interface Api {
     Call<PosterResponse> getPosters(@Path("movie_id") long movie_id);
 //    https://api.themoviedb.org/3/movie/284052/credits?api_key=6f5e2f0ce8d413514e08e0723adca6fb
 
+    @GET("movie/{movie_id}/videos?" + KEY)
+    Call<VideoResponse> getVideos(@Path("movie_id") long movie_id);
 
-//    @GET("comments?site=stackoverflow")
-//    Call<CommentsResponse> getComments(@Query("pagesize") int pagesize, @Query("min") int min, @Query("sort") String sort);
-//
-//
-//    @GET("posts/{ids}?site=stackoverflow")
-//    Call<PostResponse> getPosts(@Path("ids") long ids);
+
 }

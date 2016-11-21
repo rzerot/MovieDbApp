@@ -9,7 +9,7 @@ import java.util.ArrayList;
  */
 
 public class PosterResponse {
-
+@SerializedName("backdrops")
  private   ArrayList<Poster> posters = new ArrayList<>();
 
 
