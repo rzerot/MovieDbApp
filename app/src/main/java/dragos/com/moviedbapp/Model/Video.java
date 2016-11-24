@@ -1,10 +1,12 @@
 package dragos.com.moviedbapp.Model;
 
+import java.io.Serializable;
+
 /**
  * Created by java2 on 11/21/2016.
  */
 
-public class Video {
+public class Video implements Serializable{
     private String key;
     private String site;
 

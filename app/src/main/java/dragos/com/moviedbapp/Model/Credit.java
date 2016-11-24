@@ -1,10 +1,12 @@
 package dragos.com.moviedbapp.Model;
 
+import java.io.Serializable;
+
 /**
  * Created by L on 11/20/2016.
  */
 
-public class Credit {
+public class Credit implements Serializable{
     private String name;
     private String profile_path;
 

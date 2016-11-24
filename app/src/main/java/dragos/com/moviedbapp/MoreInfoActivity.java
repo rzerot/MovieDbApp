@@ -2,7 +2,6 @@ package dragos.com.moviedbapp;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
@@ -20,19 +19,18 @@ import dragos.com.moviedbapp.Adapters.MovieAdapter;
 import dragos.com.moviedbapp.Model.Credit;
 import dragos.com.moviedbapp.Model.CreditResponse;
 import dragos.com.moviedbapp.Model.Movie;
-import dragos.com.moviedbapp.Model.Poster;
-import dragos.com.moviedbapp.fragments.CastFragment;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 public class MoreInfoActivity extends FragmentActivity {
     final static String POSTER_KEY = "123";
+    final static String VIDEO_KEY = "333";
     CastAdapter castAdapter;
     ViewPager viewPager;
     ImageButton picture_tab;
     ArrayList<Credit> credits;
-
+    ImageButton video_btn;
 
     Movie movie;
     ImageView info_image;
@@ -72,7 +70,14 @@ public class MoreInfoActivity extends FragmentActivity {
 
             }
         });
-
+        video_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MoreInfoActivity.this, VideoActivity.class);
+                intent.putExtra(VIDEO_KEY, movie);
+                startActivity(intent);
+            }
+        });
 
     }
 
@@ -103,7 +108,7 @@ public class MoreInfoActivity extends FragmentActivity {
 
     void setUI() {
         picture_tab = (ImageButton) findViewById(R.id.picture);
-
+        video_btn = (ImageButton) findViewById(R.id.videos);
     }
 
 

@@ -13,18 +13,21 @@
         <activity
             android:name=".MainActivity"
             android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
 
         </activity>
         <activity
             android:name=".MoreInfoActivity"
             android:screenOrientation="landscape"></activity>
         <activity android:name=".PosterActivity" />
-        <activity android:name=".VideoActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".VideoActivity"
+            android:configChanges="orientation">
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
         </activity>
     </application>
